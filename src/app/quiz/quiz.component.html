@@ -1,0 +1,18 @@
+<div class="flex flex-col items-center p-8">
+  <h2 class="text-xl font-bold mb-4">Question {{currentQuestionIndex + 1}} sur {{totalQuestions}}</h2>
+
+  <div class="mb-4">
+    <p class="text-lg">{{currentQuestion.question}}</p>
+  </div>
+
+  <div *ngFor="let option of currentQuestion?.options" class="mb-2">
+    <button class="bg-blue-500 text-white p-2 rounded" (click)="answerQuestion(option)">
+      {{option}}
+    </button>
+  </div>
+
+  <div class="mt-4">
+    <p>Score actuel: {{score}}</p>
+    <progress value="{{progress}}" max="100" class="w-full"></progress>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="flex flex-col items-center p-8">
+  <h2 class="text-2xl font-bold mb-4">Votre score final</h2>
+
+  <p class="text-lg">Vous avez répondu correctement à {{correctAnswers}} sur {{totalQuestions}} questions.</p>
+
+  <div class="mb-4">
+    <label for="username" class="block text-lg">Entrez votre nom d'utilisateur :</label>
+    <input id="username" [(ngModel)]="username" type="text" class="border p-2 rounded" placeholder="Nom d'utilisateur" />
+  </div>
+
+  <button class="bg-green-500 text-white p-2 rounded" (click)="saveScore()">Enregistrer le score</button>
+  <button class="bg-gray-500 text-white p-2 rounded mt-4" (click)="restartQuiz()">Rejouer</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="flex flex-col items-center p-8">
+  <h2 class="text-2xl font-bold mb-4">Historique des scores</h2>
+
+  <div *ngIf="scores.length === 0" class="text-center">
+    <p>Aucun score enregistré.</p>
+  </div>
+
+  <ul *ngIf="scores.length > 0" class="space-y-4">
+    <li *ngFor="let score of scores">
+      <div class="p-4 border rounded-lg flex justify-between">
+        <span>{{score.username}} - {{score.score}} points</span>
+        <button (click)="deleteScore(score)" class="text-red-500">Supprimer</button>
+      </div>
+    </li>
+  </ul>
+</div>
