@@ -17,7 +17,7 @@ export class QuizComponent {
   progress = 0;
 
   answerQuestion(option: string) {
-    // logic here
+    
   }
 }
 
