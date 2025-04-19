@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
 })
+
 export class QuizComponent {
   currentQuestionIndex = 0;
   totalQuestions = 10;
@@ -16,8 +17,9 @@ export class QuizComponent {
   score = 0;
   progress = 0;
 
+
   answerQuestion(option: string) {
-    
+
   }
 }
 
